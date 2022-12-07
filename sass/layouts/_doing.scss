@@ -1,0 +1,42 @@
+.section-doing {
+    padding-top: 0;
+  }
+  .doing {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  .doing-item li {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  .title {
+    margin-bottom: 50px;
+  
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  .doing__description {
+    position: relative;
+  }
+  .doing__about {
+    position: absolute;
+
+    @extend %flex;
+
+    justify-content: center;
+    bottom: 0px;
+    min-width: 370px;
+    min-height: 70px;
+  
+    @include font ("Roboto", 700, 14px, 1.14);
+    
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--total-white);
+  }

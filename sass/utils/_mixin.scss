@@ -1,0 +1,12 @@
+@mixin font($ff, $fw, $fs, $lh ) {
+    
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+} 
+
+// застосування 
+// @include font (700, 42, 1.33);
+// Якщо щось наслідує @include font (null, 42, 1.33); 
+
