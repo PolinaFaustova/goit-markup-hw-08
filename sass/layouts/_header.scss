@@ -3,10 +3,14 @@
     border-bottom: 1px solid #ececec;
   }
   .page-header .container {
-    @extend %flex;
+    display: none;
+    
+    @include tablet {
+      display: flex;
+      align-items: center;  
+      }
   }
   
-  /* site-nav */
   .site-nav-list {
     font-weight: 500;
     font-size: 14px;
@@ -68,7 +72,7 @@
   }
   
   .logo-header {
-    @include font ("Raleway", 700, 26px, 1.19);
+    @include font ("Raleway", 700, 24px, 1.16);
 
     color: var(--hov-foc);
   }

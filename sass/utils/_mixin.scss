@@ -1,10 +1,37 @@
-@mixin font($ff, $fw, $fs, $lh ) {
+@mixin font($ff, $fw, $fs, $lh) {
     
     font-family: $ff;
     font-weight: $fw;
     font-size: $fs;
     line-height: $lh;
 } 
+
+@mixin mobile {
+    @media screen and (min-width: 480px) {
+    @content;   
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+    @content;   
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+    @content;   
+    }
+}
+
+@mixin retina {
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+    @content;
+}
+}
+
 
 // застосування 
 // @include font (700, 42, 1.33);
