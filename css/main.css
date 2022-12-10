@@ -28,8 +28,8 @@ a {
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -423,17 +423,12 @@ body {
 }
 
 .page-header .container {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .page-header .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .site-nav-list {
@@ -441,9 +436,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin-left: 93px;
 }
 .site-nav-list:hover, .site-nav-list:focus {
@@ -508,9 +501,7 @@ body {
 
 .contacts-header {
   margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -542,6 +533,10 @@ body {
   fill: currentColor;
 }
 
+.menu-open {
+  margin-left: auto;
+}
+
 /* секція герой */
 .hero {
   text-align: center;
@@ -563,6 +558,18 @@ body {
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: var(--gradient), url(../images/Hero-bg-mob-2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: var(--gradient), url(../images/Hero-bg-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/Hero-bg-tab-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
