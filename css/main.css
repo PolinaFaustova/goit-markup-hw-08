@@ -99,6 +99,29 @@ body {
   }
 }
 
+.menu-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  outline: 2px solid tomato;
+}
+@media screen and (min-width: 480px) {
+  .menu-container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    max-width: 1200px;
+  }
+}
+
 /* Cекції налаштування */
 .section {
   padding-top: 60px;
@@ -535,6 +558,31 @@ body {
 
 .menu-open {
   margin-left: auto;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  background-color: #ffffff;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+
+.mob-link,
+.mob-link-current {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--brand-color);
 }
 
 /* секція герой */

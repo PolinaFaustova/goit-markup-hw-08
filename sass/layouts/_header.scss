@@ -111,3 +111,48 @@
 .menu-open {
   margin-left: auto;
 }
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+
+  width: 100vw;
+  height: 100vw;
+  background-color: #ffffff;
+
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.menu-close {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+.menu-list {
+}
+.menu-list__item {
+}
+
+.mob-link,
+.mob-link-current {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+
+  color: var(--brand-color);
+}
+.menu-contacts {
+}
+.menu-contacts__item {
+}
+.icon-tel {
+}
+.icon-mail {
+}
+.menu-soc {
+}
+.menu-soc__item {
+}
+.menu-soc__link {
+}
