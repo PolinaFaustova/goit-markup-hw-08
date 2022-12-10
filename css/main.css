@@ -544,48 +544,38 @@ body {
 
 /* секція герой */
 .hero {
+  text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
-  max-width: 100%;
-  margin: 0 auto;
+  max-width: 100vw;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   background-color: rgba(47, 48, 58, 0.4);
+  color: var(--total-white);
   background-image: var(--gradient), url(../images/Hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: var(--total-white);
-  text-align: center;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: var(--gradient), url(../images/Hero-bg-mob-2x.jpg);
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1200px) {
   .hero {
-    background-image: var(--gradient), url(../images/Hero-bg-tab.jpg);
-  }
-}
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: var(--gradient), url(../images/Hero-bg-tab-2x.jpg);
-  }
-}
-@media screen and (min-width: 768px) {
-  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
     background-image: var(--gradient), url(../images/Heroback.jpg);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: var(--gradient), url(../images/Herobck-2x.jpg);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero {
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
 }
 
