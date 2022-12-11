@@ -45,6 +45,10 @@ p {
   padding: 0;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .clients__link, .clients, .icons-social, .doing__about, .quality__icons, .contacts-header a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,21 +109,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   outline: 2px solid tomato;
-}
-@media screen and (min-width: 480px) {
-  .menu-container {
-    max-width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .menu-container {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .menu-container {
-    max-width: 1200px;
-  }
 }
 
 /* Cекції налаштування */
@@ -572,6 +561,20 @@ body {
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
+}
+.mob-menu > .menu-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 80px;
 }
 
 .menu-close {
