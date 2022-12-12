@@ -38,7 +38,7 @@
         <ul class="contacts-header">
           <li class="item">
             <a href="mailto:info@devstudio.com">
-              <svg class="icon-mail" width="16" height="12">
+              <svg class="icon-mail" width="14" height="10">
                 <use href="./images/icons.svg#icon-envelope-hover"></use>
               </svg>
               info@devstudio.com
@@ -46,14 +46,18 @@
           </li>
           <li class="item">
             <a href="tel:+380961111111">
-              <svg class="icon-tel" width="10" height="16">
+              <svg class="icon-tel" width="10" height="14">
                 <use href="./images/icons.svg#icon-Vector"></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
-        <button type="button" class="menu-open" data-menu-open>0</button>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg class="menu-open-icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
 
       <!-- Mob menu -->
@@ -181,9 +185,9 @@
       </section>
 
       <!-- Чим ми займаємося -->
-      <!-- <section class="section section-doing">
+      <section class="section section-doing">
         <div class="container">
-          <h2 class="title">Чим ми займаємося</h2>
+          <h2 class="title-doing">Чим ми займаємося</h2>
           <ul class="doing">
             <li>
               <div class="doing__description">
@@ -207,7 +211,7 @@
         </div>
       </section>
       
-      <!- Наша команда -->
+      <!-- <!- Наша команда --> 
 
       <section class="section section-team">
         <div class="container">
@@ -281,15 +285,35 @@
             </li>
 
             <li class="team-h-p">
-              <img
-                srcset="
-                  ./images/comanda/olga.jpg    1x,
-                  ./images/comanda/olga-2x.jpg 2x
-                "
-                src="./images/comanda/olga.jpg"
+                <picture>
+                <source
+                  srcset="
+                    ./images/comanda/olga.jpg    1x,
+                    ./images/comanda/olga-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/comanda/olga-tab.jpg    1x,
+                    ./images/comanda/olga-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/comanda/olga-mob.jpg    1x,
+                    ./images/comanda/olga-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                src="./images/comanda/olga-mob.jpg"
                 alt="Ольга Рєпіна"
-                width="270"
+                width="450"
               />
+              </picture>
+
               <div class="item-name-position">
                 <h3 class="team-name">Ольга Рєпіна</h3>
                 <p class="team-position">Frontend Developer</p>
@@ -326,15 +350,35 @@
               </div>
             </li>
             <li class="team-h-p">
-              <img
-                srcset="
-                  ./images/comanda/mikola.jpg    1x,
-                  ./images/comanda/mikola-2x.jpg 2x
-                "
-                src="./images/comanda/mikola.jpg"
-                alt="Микола Тарасов"
-                width="270"
-              />
+
+              <picture>
+                <source
+                  srcset="
+                    ./images/comanda/mikola.jpg    1x,
+                    ./images/comanda/mikola-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/comanda/mikola-tab.jpg    1x,
+                    ./images/comanda/mikola-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/comanda/mikola-mob.jpg    1x,
+                    ./images/comanda/mikola-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/comanda/mikola-mob.jpg"
+                  alt="Микола Тарасов"
+                  width="450"
+                />
+              </picture>
               <div class="item-name-position">
                 <h3 class="team-name">Микола Тарасов</h3>
                 <p class="team-position">Marketing</p>
@@ -371,15 +415,36 @@
               </div>
             </li>
             <li class="team-h-p">
-              <img
-                srcset="
-                  ./images/comanda/mixa.jpg    1x,
-                  ./images/comanda/mixa-2x.jpg 2x
-                "
-                src="./images/comanda/mixa.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-              />
+
+              <picture>
+                <source
+                  srcset="
+                    ./images/comanda/mixa.jpg    1x,
+                    ./images/comanda/mixa-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/comanda/mixa-tab.jpg    1x,
+                    ./images/comanda/mixa-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/comanda/mixa-mob.jpg    1x,
+                    ./images/comanda/mixa-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/comanda/mixa-mob.jpg"
+                  alt="Михайло Єрмаков"
+                  width="450"
+                />
+              </picture>
+  
               <div class="item-name-position">
                 <h3 class="team-name">Михайло Єрмаков</h3>
                 <p class="team-position">UI Designer</p>
@@ -458,7 +523,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer-bck">
+    <footer class="footer-bck">
       <div class="container">
         <div class="footer-adress">
           <a href="#" class="logo-footer"><span class="web">Web</span>Studio</a>
@@ -524,7 +589,7 @@
         </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- Modalka -->
     <div class="backdrop is-hidden" data-modal>
@@ -565,7 +630,7 @@
       <label for="user-text" class="input-label">Коментар</label>
       <textarea name="user-text" id="user-text" class="modal-comment" placeholder="Введіть текст"></textarea>
     </div>
-      Checkbox
+      <!-- Checkbox -->
       <div class="checkbox-wrapper">
       <input type="checkbox" name="agreement" id="agreement" class="checkbox-modal visually-hidden" placeholder=" "/>
       <label for="agreement" class="checkbox-text">Погоджуюся з розсилкою та приймаю</label>
@@ -575,7 +640,7 @@
       </form>
       </div>
     </div>
-    <script src="./modal.js"></script>
-    <script src="./menu.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
