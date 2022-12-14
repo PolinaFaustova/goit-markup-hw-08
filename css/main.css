@@ -646,8 +646,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   background-color: transparent;
   border: transparent;
 }
