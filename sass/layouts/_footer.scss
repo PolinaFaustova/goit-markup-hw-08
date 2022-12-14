@@ -1,16 +1,49 @@
 .footer-bck .container {
-    display: flex;
     align-items: baseline;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+    }
   }
   .footer-bck {
     background-color: var(--background-black);
     padding-top: 60px;
     padding-bottom: 60px;
+    width: 100%;
+  }
+
+  .footer-adress {
+    text-align: center;
+    margin-bottom: 60px;
+    
+    @include tablet {
+      margin-left: 76px;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+      margin-left: 0;
+      text-align: left;
+    }
   }
   .logo-footer {
-    @include font ("Raleway", 700, 26px, 1.19);
-  
+    margin-right: 0; 
+    // this up
+
     color: var(--total-white);
+
+    @include font ("Raleway", 700, 24px, 1.16);
+    letter-spacing: 0.03em;
+
+    @include desktop {
+      font-size: 26px;
+      line-height: 1.19;
+    }
   }
   .web {
     color: var(--blue-color);
@@ -44,10 +77,23 @@
   }
   /* Футер приєднуйтесь і лінки */
   .footer-svg {
-    margin-left: 70px;
+    margin-bottom: 60px;
+    justify-content: center;
+
+    @include tablet {
+      margin-left: 165px;
+    }
+
+    @include desktop {
+      margin-left: 70px;
+      margin-bottom: 0;
+    }
+    
   }
   .footer-item {
     margin-bottom: 20px;
+    text-align: center;
+    // add up this
     
     @include font ("Roboto", 700, 14px, 1.14);
 
@@ -56,6 +102,7 @@
     text-transform: uppercase;
   
     color: var(--total-white);
+
   }
   .footer-icons {
     display: flex;
@@ -94,10 +141,20 @@
   }
   /* Footer Subscribe */
   .footer-subscribe {
-    margin-left: 93px;
-  }
+    
+    @include tablet {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include desktop {
+      margin-left: 90px;
+    }
+    
+}
   .subscribe-p {
   margin-bottom: 20px;
+  text-align: center;
   
   font-weight: 700;
   font-size: 14px;
@@ -106,15 +163,23 @@
   text-transform: uppercase;
   
   color: var(--total-white);
+
+  @include desktop {
+    text-align: left;
+  }
   }
   .footer-form {
-  display: flex;
+  display: block;
+
+  @include desktop {
+    display: flex;
+  }
   }
   .footer-label {
   margin-right: 12px; 
   }
   .subscribe-input {
-  width: 358px;
+  width: 100%;
   padding: 15px 16px;
   outline: transparent;
   background-color: transparent;
@@ -136,12 +201,27 @@
   &:hover {
     border-color: var(--blue-color);
   }
+  
+  @include mobile {
+    width: 450px; 
+  }
+
+  @include desktop {
+    width: 358px; 
+  }
   }
   
   .footer-but {
   display: flex;
   justify-content: center;
   align-items: center;  
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+
+  @include desktop {
+    margin-top: 0;
+  }
   }
   .subscribe-icon {
   margin-left: 10px;
