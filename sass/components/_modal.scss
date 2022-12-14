@@ -20,8 +20,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 528px;
-    min-height: 581px;
+    min-width: 320px;
+    min-height: 609px;
   
     padding: 40px;
   
@@ -35,6 +35,14 @@
 
     .backdrop.is-hidden & {
       transform: translate(-50%, -50%) scale(1.1);
+    }
+    
+    @include mobile {
+    min-width: 450px;
+    }
+    @include desktop {
+    min-width: 528px; 
+    min-height: 581px;
     }
   }
 
@@ -67,12 +75,16 @@
   .modal-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: calc(30 / 20);
     text-align: center;
   
     margin-bottom: 12px;
   
     color: var(--brand-color);  
+
+    @include desktop {
+      line-height: 1.15; 
+    }
   }
   .input-label {
     display: block;
@@ -164,10 +176,13 @@
   align-items: center;
   
   margin-right: 8px;
-  
+
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.03em;
+  
+  
   
   color: var(--p-color);
 
@@ -194,28 +209,49 @@
       .checkbox-modal:focus + &::before {
         border-color: var(--blue-color);
         }
+
+        @include desktop {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.71;
+        }
   }
   
   .checkbox-link {
   position: relative;
   
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.03em;
+  
   color: var(--blue-color); 
+
+  
+  
 
   &::after {
     content: "";
   
     position: absolute;
     left: 0;
-    bottom: 3px;
+    
     
     display: block;
     width: 100%;
     height: 1px;
     background-color: var(--blue-color);
+
+    @include desktop {
+      bottom: 3px;
+    }
+
   }
+
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
   .check-button {

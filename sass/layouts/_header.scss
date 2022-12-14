@@ -169,6 +169,7 @@
 }
 .menu-open {
   margin-left: auto;
+  color: var(--hov-foc);
 
 
   display: flex;
@@ -178,6 +179,7 @@
 
   min-width: 40px;
   min-height: 40px;
+  padding: 0;
   background-color: transparent;
   border: transparent; 
 
