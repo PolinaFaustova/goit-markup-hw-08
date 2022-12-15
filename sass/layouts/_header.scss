@@ -207,11 +207,6 @@
   padding-bottom: 48px;
   padding-left: 40px;
 
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-
   > .menu-container {
   height: 100%;
   display: flex;
@@ -221,6 +216,11 @@
   min-height: 80px;
   }
   
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 .menu-close {
   display: block;
@@ -254,6 +254,12 @@
   letter-spacing: 0.02em;
 
   color: var(--brand-color);
+  &:focus {
+    color: var(--blue-color);
+  }
+}
+.mob-link-current {
+  color: var(--blue-color);
 }
 .menu-contacts {
   margin-bottom: 64px;

@@ -716,10 +716,6 @@ body {
   padding-bottom: 48px;
   padding-left: 40px;
 }
-.mob-menu.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
 .mob-menu > .menu-container {
   height: 100%;
   display: -webkit-box;
@@ -733,6 +729,12 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 80px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .menu-close {
@@ -769,6 +771,14 @@ body {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: var(--brand-color);
+}
+.mob-link:focus,
+.mob-link-current:focus {
+  color: var(--blue-color);
+}
+
+.mob-link-current {
+  color: var(--blue-color);
 }
 
 .menu-contacts {
