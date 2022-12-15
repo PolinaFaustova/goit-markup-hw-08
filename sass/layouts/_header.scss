@@ -226,6 +226,18 @@
   display: block;
   margin-left: auto;
   margin-bottom: 15px;
+  width: 40px;
+  height: 40px;
+}
+.menu-close-icon {
+  min-width: 18px;
+  min-height: 18px;
+  fill: currentColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:focus {
+    color: var(--blue-color);
+  }
 }
 .menu-list {
   margin-bottom: 302px;
