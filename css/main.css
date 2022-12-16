@@ -104,7 +104,9 @@ body {
 
 .menu-container {
   width: 100%;
-  height: 100vw;
+  height: 100vh;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -233,7 +235,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 320px;
+  width: 90%;
   min-height: 609px;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -723,7 +725,7 @@ body {
   top: 0;
   z-index: 1;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -740,10 +742,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
 }
 
 .is-hidden {
@@ -755,9 +759,22 @@ body {
 .menu-close {
   display: block;
   margin-left: auto;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   width: 40px;
   height: 40px;
+  padding: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
 }
 
 .menu-close-icon {
@@ -772,11 +789,15 @@ body {
 }
 
 .menu-list {
-  margin-bottom: 302px;
-}
-
-.menu-list__item:not(:last-child) {
-  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  margin-bottom: 210px;
 }
 
 .mob-link,
@@ -797,11 +818,18 @@ body {
 }
 
 .menu-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
   margin-bottom: 64px;
 }
 
 .menu-contacts__tel a {
-  margin-bottom: 32px;
   font-weight: 500;
   font-size: 34px;
   line-height: 1.1764705882;
@@ -826,6 +854,16 @@ body {
   gap: 20px;
   margin: 0;
   padding: 0;
+}
+
+.menu-soc__item:not(:last-child)::after {
+  content: "";
+  width: 22px;
+  height: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-left: 10px;
 }
 
 .menu-soc__link {
