@@ -797,7 +797,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 32px;
-  margin-bottom: 210px;
+  margin-bottom: 200px;
 }
 
 .mob-link,
@@ -914,6 +914,7 @@ body {
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
+    background-position: left;
     background-image: var(--gradient), url(../images/Hero-bck.jpg);
   }
 }
