@@ -40,6 +40,9 @@
     @include mobile {
     min-width: 450px;
     }
+    @include tablet {
+      width: 100%;
+    }
     @include desktop {
     min-width: 528px; 
     min-height: 581px;
