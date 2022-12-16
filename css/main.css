@@ -235,7 +235,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 90%;
+  min-width: 340px;
   min-height: 609px;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -256,11 +256,6 @@ body {
 @media screen and (min-width: 480px) {
   .modal {
     min-width: 450px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .modal {
-    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {

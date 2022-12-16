@@ -20,7 +20,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90%;
+    min-width: 340px;
     min-height: 609px;
   
     padding: 40px;
@@ -40,9 +40,7 @@
     @include mobile {
     min-width: 450px;
     }
-    @include tablet {
-      width: 100%;
-    }
+
     @include desktop {
     min-width: 528px; 
     min-height: 581px;
