@@ -103,6 +103,9 @@
   
     color: var(--total-white);
 
+    @include desktop {
+      text-align: left;
+    }
   }
   .footer-icons {
     display: flex;
